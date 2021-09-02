@@ -26,6 +26,7 @@
     </header>
     <div class="form-content">
         <form class="form" action="#" onsubmit="save()"onreset="resetForm()">
+
             <div class="form-head">
                 <div class="form-head-text">PERSON ADDRESS FORM</div>
                 <div class="cancel-img">
@@ -68,6 +69,7 @@
                     </select>
                     <input type="number" class="input-code" id="zipcode" name="zipcode" placeholder="Zip Code.."
                         required>
+                        <error-output for="zipcode" class="zip-error"></error-output>
                 </div>
             </div>
             <div class="button-parent">

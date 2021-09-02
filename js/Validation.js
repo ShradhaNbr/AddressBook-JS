@@ -52,11 +52,12 @@ window.addEventListener('DOMContentLoaded',()=>{
 //save Address Book when Add button is clicked
 const save = ()=> {
     try{
-        let addressbook = new AddressBook();
+        let addressbook = createAddressBook();
+        createAndUpdateStorage(addressbook);
     }catch(e){
         return;
     }
-}
+};
 //function to populate employee object with html form data
 const createAddressBook = ()=> {
     let addressbook = new AddressBook();
@@ -86,12 +87,24 @@ const createAddressBook = ()=> {
 }
 
 //function to get form values by Id
-const getInputValueById = (id=>{
+const getInputValueById = (id )=>{
     let value = document.querySelector(id).value;
     return value;
-});
+}
 //function to set text value
 const setTextValue = (id,value) => {
     const element = document.querySelector(id);
     element.textContent = value;
+}
+
+//create and update local storage with addressbook object
+function createAndUpdateStorage(addressbookData){
+    let addressbookList = JSON.parse(localStorage.getItem("AddressBookList"));
+    if(addressbookList != undefined){
+        addressbookList.push(addressbookData);
+    }else{
+        addressbookList = [addressbookData];
+    }
+    alert(addressbookList.toString());
+    localStorage.setItem("AddressBookList",JSON.stringify(addressbookList));
 }
