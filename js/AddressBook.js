@@ -1,6 +1,7 @@
-  
-class AddressBook {
+  class AddressBook {
    
+    /* Using getters and setters
+     Regex method to validate the data*/
     get name() { return this._name;}
     set name(name) {
         let nameRegex = RegExp('^[A-Z]{1}[\\sa-zA-Z]{2,}$');
@@ -15,7 +16,7 @@ class AddressBook {
         console.log(words);
         for ( let i =0 ; i<words.length ; i++){
             console.log(words[i]);
-            let addressRegex = RegExp('^[A-Za-z0-9]{3,}$');
+            let addressRegex = RegExp('^[A-Za-z0-9//s]{3,}$');
             if(!addressRegex.test(words[i]))
                 throw 'Invalid Address';   
         }
