@@ -48,3 +48,12 @@ window.addEventListener('DOMContentLoaded',()=>{
         }
     });
 });
+
+//save Address Book when Add button is clicked
+const save = ()=> {
+    try{
+        let addressbook = new AddressBook();
+    }catch(e){
+        return;
+    }
+}

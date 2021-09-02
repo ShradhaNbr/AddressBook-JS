@@ -44,4 +44,10 @@ class AddressBook {
             this._number = number;
         else throw 'Invalid Phone Number'; 
     }
+    toString(){
+        return "[ First Name: "+this.firstName+", Last Name: "+this.lastName+", Address: "+this.address+
+                ", City: "+this.city+", State: "+this.state+", Zip Code: "+this.zipCode+", Phone Number: "+
+                this.phoneNumber+", Email: "+this.email+" ]";
+
+    }
 }
