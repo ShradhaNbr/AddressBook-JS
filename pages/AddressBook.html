@@ -7,6 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/style.css">
     <title>Address Book</title>
+    <script src="../js/AddressBook.js"></script>
+    <script src="../js/Validation.js"></script>
 </head>
 
 <body>
@@ -23,17 +25,18 @@
         </div>
     </header>
     <div class="form-content">
-        <form class="form">
+        <form class="form" action="#" onsubmit="save();return false" onreset="resetForm()">
             <div class="form-head">
                 <div class="form-head-text">PERSON ADDRESS FORM</div>
                 <div class="cancel-img">
-                    <a href="../html_files/AddressBook.html"><img src="../assets/cancel.jpg" alt="" </a>
+                    <a href="../html_files/AddressBook.html"><img src="../assets/cancel.jpg" alt="" ></a>
                 </div>
             </div>
             <div class="row-content">
                 <label for="name" class="label text"></label>
                 <input type="text" class="input" id="name" name="name" placeholder="Full Name.." required>
                 <error-output for="text" class="text-error"></error-output>
+                
             </div>
             <div class="row-content">
                 <label for="number" class="label text"></label>
@@ -75,6 +78,7 @@
             </div>
         </form>
     </div>
+    
 </body>
 
 </html>

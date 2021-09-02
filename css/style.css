@@ -128,10 +128,10 @@ select {
 }
 
 error-output {
-    background-color: red;
-    font-size: 15px;
-    font: italic;
-    font-family: sans-serif;
+    margin-left: 10px;
+    font-size: 12px;
+    font-style: italic;
+    color: red;
 }
 
 .button-parent {
