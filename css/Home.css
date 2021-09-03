@@ -1,0 +1,41 @@
+body{
+    height: 100%;
+}
+.header {
+    padding: 15px 0px;
+    background-color: #ffffff;
+}
+.header-content {
+    flex-direction: row;
+    display: flex;
+    justify-content: center;
+}
+.logo-content {
+    display: flex;
+    flex-direction: row;
+    align-items: center; 
+    width: 80%;
+}
+img {
+    height: 50px;
+    width: 50px;
+}
+
+.heading{
+    align-items: center;
+    color: blue;
+    width: 90%;
+    text-align: center;
+    
+}
+.per-text {
+    color: rgb(0, 89, 255);
+    font-weight: bold;
+    font-size: large;
+}
+.per-address {
+    color: darkblue;
+    font-weight: bold;
+    font-size: large;
+
+}

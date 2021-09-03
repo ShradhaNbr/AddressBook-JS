@@ -115,6 +115,6 @@ const resetForm=()=>{
     setValue('#address',' ');
     setValue('#city','Select City');
     setValue('#state','Select State');
-    setValue('#zipcode','Select ZipCode');
+    setValue('#zipcode','');
     setValue('#phone',' '); 
 }

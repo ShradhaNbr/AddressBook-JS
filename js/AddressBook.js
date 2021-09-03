@@ -12,17 +12,12 @@
 
     get address() { return this._address;}
     set address(address) {
-        let words = address.split(' ');
-        console.log(words);
-        for ( let i =0 ; i<words.length ; i++){
-            console.log(words[i]);
             let addressRegex = RegExp('^[A-Za-z0-9//s]{3,}$');
-            if(!addressRegex.test(words[i]))
-                throw 'Invalid Address';   
+            if(addressRegex.test(address))
+            this._address = address;
+            else  throw 'Invalid Address';   
         }
-        this._address = address;
-    }
-
+       
     get city() { return this._city;}
     set city(city) {
         this._city = city;    
@@ -46,9 +41,9 @@
         else throw 'Invalid Phone Number'; 
     }
     toString(){
-        return "[ First Name: "+this.firstName+", Last Name: "+this.lastName+", Address: "+this.address+
-                ", City: "+this.city+", State: "+this.state+", Zip Code: "+this.zipCode+", Phone Number: "+
-                this.phoneNumber+", Email: "+this.email+" ]";
+        return "[ Name: "+this._name+", Address: "+this._address+
+                ", City: "+this._city+", State: "+this._state+", Zip Code: "+this._zipCode+", Phone Number: "+
+                this._number+" ]";
 
     }
 }
