@@ -59,19 +59,32 @@ img {
 }
 
 .Person-detail-text{
-    font: normal normal bold 30px/25px Roboto;
+    font: normal normal bold 23px/23px Roboto;
     color: #42515f;
 }
-.add-button{
-    font: normal normal normal 25px/50px Roboto;
+
+.person-count{
+    background-color: darkblue;;
     color: #ffffff;
-    background: rgb(0, 89, 255);
+    border-radius: 42%;
+    font-size: 16px;
+    width: 26px;
+    text-align: center;
+    display: inline-block;
+}
+
+.add-button{
+    font: normal normal normal 22px/29px Rubik;
+    color: #ffffff;
+    background:rgb(0, 89, 255);
     border-radius: 5px;
-    padding: 1px 5px;
+    padding: 5px 10px;
     cursor: pointer;
     text-decoration: none;
-    display: flex;
-    height: 50px;
+} 
+.add-button > img {
+    width: 22px;
+    height:auto;
 }
 .table{
     width: 100%;
