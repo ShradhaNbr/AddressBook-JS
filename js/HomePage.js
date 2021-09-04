@@ -1,4 +1,3 @@
-//declare global variable for employee payroll list
 let addressbookList;
 
 window.addEventListener('DOMContentLoaded', () => {
@@ -27,7 +26,7 @@ const createInnerHTML = () => {
             <td>${addressbookData._city}</td>
             <td>${addressbookData._state}</td>
             <td>${addressbookData._zipCode}</td>
-            <td>${addressbookData._phoneNumber}</td>
+            <td>${addressbookData._number}</td>
             <td>
                 <img id="${addressbookData._id}" onclick="remove(this)" alt="delete" src="../assets/delete-black-18dp.svg">
                 <img id="${addressbookData._id}" alt="Edit" onclick="update(this)" src="../assets/create-black-18dp.svg">
@@ -36,4 +35,17 @@ const createInnerHTML = () => {
         `;
     }
     document.querySelector('#table-display').innerHTML=innerHtml;
+}
+
+// remove person details from addressbook list
+const remove = (node)=> {
+    let addressbookData = addressbookList.find(personData=>personData._id == node.id);
+    if (!addressbookData) return;
+    const index =  addressbookList
+                  .map(personData=>personData._id)
+                  .indexOf(addressbookData._id);
+    addressbookList.splice(index,1);
+    localStorage.setItem("AddressBookList",JSON.stringify(addressbookList));
+    document.querySelector('.person-count').textContent = addressbookList.length;
+    createInnerHTML();
 }

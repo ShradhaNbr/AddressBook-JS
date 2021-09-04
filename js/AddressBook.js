@@ -2,6 +2,8 @@
    
     /* Using getters and setters
      Regex method to validate the data*/
+
+     
     get name() { return this._name;}
     set name(name) {
         let nameRegex = RegExp('^[A-Z]{1}[\\sa-zA-Z]{2,}$');
